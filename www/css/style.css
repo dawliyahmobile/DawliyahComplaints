@@ -1,0 +1,43 @@
+/* Empty. Add your own CSS if you like */
+.home .scroll-content {
+  display: table !important;
+  width: 100% !important;
+  height: 100% !important;
+  margin-top: -50px;
+  text-align: center;
+}
+.home .scroll {
+  display: table-cell;
+  vertical-align: middle;
+}
+.errors span {
+  color: red;
+}
+.border-top {
+    border-top: solid 1px #ccc;
+    padding-top: 13px;
+}
+.paddingCustom{
+ padding:5px;
+}
+a{
+	text-decoration:none;
+}
+.custom-dark{
+    color : #30393A !important; // text
+    background-color:blue!important; // for bg color
+ }
+ .float-right{
+	 float:right;
+ }
+ .float-clear{
+	 clear:both;
+ }
+ .item-radio input[type="radio"] {
+  display: none;
+}
+.feedBackimg{
+	width:40px;
+	height:32px;
+	padding:2px;
+}

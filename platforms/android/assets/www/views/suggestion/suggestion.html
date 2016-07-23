@@ -1,0 +1,15 @@
+<ion-view view-title="Suggestions" ng-controller="SuggestionCtrl">
+		<ion-content>
+		<ng-form name="SuggestionForm">
+		<div class="list list-inset">
+		<label class="item item-input item-stacked-label">
+			<textarea placeholder="Give us your suggestion" rows="5" ng-model="suggestion.Comments" name="suggestionCommentsField" ng-required="true"></textarea>
+			<alert class="errors" ng-show="SuggestionForm.suggestionCommentsField.$invalid">
+					   <span ng-show="SuggestionForm.suggestionCommentsField.$error.required" class="mandatory">Enter Suggestion</span>
+			</alert>
+		</label>		
+			<input type="button" class="button button-block button-royal" ng-click="submitSuggestion(suggestion)" value="Submit" ng-disabled="SuggestionForm.$invalid"/>
+		</div>
+		</ng-form>
+		</ion-content>
+</ion-view>

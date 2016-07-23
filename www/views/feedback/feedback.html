@@ -1,0 +1,145 @@
+<ion-view view-title="FeedBack" ng-controller="FeedBackCtrl">
+		<ion-content class="padding">	
+		<ng-form name="surveyForm">
+			<div class="card">
+				<div class="item-divider">
+					<h4 class="item-divider paddingCustom">1. The behavior and efficiency of employees and their ability to accomplish the service</h4>
+				</div>
+				<div class="item item-text-wrap">
+					<alert class="errors" ng-show="surveyForm.q1.$invalid">
+						<span class="mandatory">Please Select<span>
+					</alert>
+					<div class="list">
+					<label ng-repeat="option in optionList">
+					<input type="radio" name="q1"  ng-model="$parent.form.q1" ng-value="'{{option.value}}'"  ng-required="true"/><img ng-src="{{option.img}}" class="icon ion-home paddingCustom feedBackimg"/>
+					</label>
+					</div>
+				</div>
+			</div>
+
+			
+			<div class="card">
+				<div class="item-divider">		
+			<h4 class="item-divider paddingCustom">2. The transparency of insurance procedures and service related information</h4>
+			</div>
+				<div class="item item-text-wrap">
+			<alert class="errors" ng-show="surveyForm.q2.$invalid">
+				<span class="mandatory">Please Select<span>
+			</alert>
+			<div class="list">
+					<label ng-repeat="option in optionList">
+					<input type="radio" name="q2"  ng-model="$parent.form.q2" ng-value="'{{option.value}}'"  ng-required="true"/><img ng-src="{{option.img}}" class="icon ion-home paddingCustom feedBackimg"/>
+					</label>
+			</div>
+			</div>
+			</div>
+			
+			<div class="card">
+				<div class="item-divider">
+			<h4 class="item-divider paddingCustom">3. Time taken to accomplish the service</h4>
+			</div>
+				<div class="item item-text-wrap">
+			<alert class="errors" ng-show="surveyForm.q3.$invalid">
+				<span class="mandatory">Please Select<span>
+			</alert>
+			<div class="list">
+					<label ng-repeat="option in optionList">
+					<input type="radio" name="q3"  ng-model="$parent.form.q3" ng-value="'{{option.value}}'"  ng-required="true"/><img ng-src="{{option.img}}" class="icon ion-home paddingCustom feedBackimg"/>
+					</label></div>
+			</div>
+			</div>
+			
+			<div class="card">
+				<div class="item-divider">
+			<h4 class="item-divider paddingCustom">4. The e-services provided by Al Dawliyah insurance services through mobile applications</h4>
+			</div>
+				<div class="item item-text-wrap">
+			<alert class="errors" ng-show="surveyForm.q4.$invalid">
+				<span class="mandatory">Please Select<span>
+			</alert>
+			<div class="list">
+					<label ng-repeat="option in optionList">
+					<input type="radio" name="q4"  ng-model="$parent.form.q4" ng-value="'{{option.value}}'"  ng-required="true"/><img ng-src="{{option.img}}" class="icon ion-home paddingCustom feedBackimg"/>
+					</label></div>
+			</div>
+			</div>
+			
+			<div class="card">
+				<div class="item-divider">
+			<h4 class="item-divider paddingCustom">5. Insurance policy fees</h4>
+			</div>
+				<div class="item item-text-wrap">
+			<alert class="errors" ng-show="surveyForm.q5.$invalid">
+				<span class="mandatory">Please Select<span>
+			</alert>
+			<div class="list">
+					<label ng-repeat="option in optionList">
+					<input type="radio" name="q5"  ng-model="$parent.form.q5" ng-value="'{{option.value}}'"  ng-required="true"/><img ng-src="{{option.img}}" class="icon ion-home paddingCustom feedBackimg"/>
+					</label></div>
+			</div>
+			</div>
+			
+			<div class="card">
+				<div class="item-divider">
+			<h4 class="item-divider paddingCustom">6. Payment methods availability for insurance policy fees</h4>
+			</div>
+				<div class="item item-text-wrap">
+			<alert class="errors" ng-show="surveyForm.q6.$invalid">
+				<span class="mandatory">Please Select<span>
+			</alert>
+			<div class="list">
+					<label ng-repeat="option in optionList">
+					<input type="radio" name="q6"  ng-model="$parent.form.q6" ng-value="'{{option.value}}'"  ng-required="true"/><img ng-src="{{option.img}}" class="icon ion-home paddingCustom feedBackimg"/>
+					</label></div>
+			</div>
+			</div>
+			
+			<div class="card">
+				<div class="item-divider">
+			<h4 class="item-divider paddingCustom">7. Additional services provided by Al Dawliyah Insurance Services ,like road side assistance service, 
+			Replacement Car Hire service....etc</h4>
+			</div>
+				<div class="item item-text-wrap">
+			<alert class="errors" ng-show="surveyForm.q7.$invalid">
+				<span class="mandatory">Please Select<span>
+			</alert>
+			<div class="list">
+					<label ng-repeat="option in optionList">
+					<input type="radio" name="q7"  ng-model="$parent.form.q7" ng-value="'{{option.value}}'"  ng-required="true"/><img ng-src="{{option.img}}" class="icon ion-home paddingCustom feedBackimg"/>
+					</label></div>
+			</div>
+			</div>
+			
+			<div class="card">
+				<div class="item-divider">
+			<h4 class="item-divider paddingCustom">8. Al Dawliyah Insurance services fees compared to other companies</h4>
+			</div>
+				<div class="item item-text-wrap">
+			<alert class="errors" ng-show="surveyForm.q8.$invalid">
+				<span class="mandatory">Please Select<span>
+			</alert>
+			<div class="list">
+					<label ng-repeat="option in optionList">
+					<input type="radio" name="q8"  ng-model="$parent.form.q8" ng-value="'{{option.value}}'"  ng-required="true"/><img ng-src="{{option.img}}" class="icon ion-home paddingCustom feedBackimg"/>
+					</label></div>
+			</div>
+			</div>
+			
+			<div class="card">
+				<div class="item-divider">
+			<h4 class="item-divider paddingCustom">9. Overall satisfaction with Al Dawliyah Insurance Services</h4>
+			</div>
+				<div class="item item-text-wrap">
+			<alert class="errors" ng-show="surveyForm.q9.$invalid">
+				<span class="mandatory">Please Select<span>
+			</alert>
+			<div class="list">
+					<label ng-repeat="option in optionList">
+					<input type="radio" name="q9"  ng-model="$parent.form.q9" ng-value="'{{option.value}}'"  ng-required="true"/><img ng-src="{{option.img}}" class="icon ion-home paddingCustom feedBackimg"/>
+					</label></div> 
+			</div>
+			</div>
+			<input type="button" class="button button-block button-royal" ng-click="submitSurvey(form)" value="Submit" ng-disabled="surveyForm.$invalid"/>
+			</ng-form>
+		</ion-content>
+</ion-view>

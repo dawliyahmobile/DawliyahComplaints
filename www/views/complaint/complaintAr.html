@@ -1,0 +1,47 @@
+<ion-view view-title="Register Complaint" ng-controller="ComplaintCtrl">
+		<ion-content>
+		<ng-form name="ComplaintForm">
+			<div class="list list-inset" dir="rtl">
+				<label class="item item-input item-stacked-label paddingCustom">
+					<span class="input-label">أدخل الإسم</span>
+					<input type="text" name="complaintantFirstNameField" placeholder="تساساس" ng-model="complaint.FirstName" ng-required="true">
+					<alert class="errors" ng-show="ComplaintForm.complaintantFirstNameField.$invalid">
+                       <span ng-show="ComplaintForm.complaintantFirstNameField.$error" class="mandatory">أدخل الإسم الأول</span>
+                    </alert>
+				</label>
+				<label class="item item-input item-stacked-label paddingCustom">
+					<span class="input-label">اسم العائلة</span>
+					<input type="text" name="complaintantLastNameField" placeholder="Javeed" ng-model="complaint.LastName" ng-required="true">
+					<alert class="errors" ng-show="ComplaintForm.complaintantLastNameField.$invalid">
+                       <span ng-show="ComplaintForm.complaintantLastNameField.$error" class="mandatory">أدخل اسم العائلة</span>
+                    </alert>
+				</label>
+				<label class="item item-input item-stacked-label paddingCustom">
+					<span class="input-label"> البريد الالكتروني</span>
+					<input type="text" name="complaintantEmailField" placeholder="jaffar@example.com" ng-pattern="/^[_a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/" ng-model="complaint.Email" ng-required="true">
+					<alert class="errors" ng-show="ComplaintForm.complaintantEmailField.$invalid">
+                       <span ng-show="ComplaintForm.complaintantEmailField.$error.pattern" class="mandatory">بريد إلكتروني خاطئ</span>
+					   <span ng-show="ComplaintForm.complaintantEmailField.$error.required" class="mandatory">أدخل البريد الإلكتروني</span>
+                    </alert>
+				</label>
+				<label class="item item-input item-stacked-label paddingCustom">
+					<span class="input-label">رقم الموبايل</span>
+					<input type="text" name="complaintantMobileField" placeholder="009715XXXXXXXX" ng-model="complaint.Mobile" ng-keypress="filterValue($event);" ng-minlength="14" maxlength="14" ng-required="true">
+					<alert class="errors" ng-show="ComplaintForm.complaintantMobileField.$invalid">
+                       <span ng-show="ComplaintForm.complaintantMobileField.$error.pattern" class="mandatory">موبايل صالح</span>
+					   <span ng-show="ComplaintForm.complaintantMobileField.$error.required" class="mandatory">رقم الموبايل</span>
+                    </alert>
+				</label>
+				<label class="item item-input item-stacked-label paddingCustom">
+					<span class="input-label">تعليقات</span>
+					<textarea  name="complaintantCommentsField" placeholder="بيسبWrite the Complaint" rows="5" ng-model="complaint.Comments" ng-required="true"></textarea>
+					<alert class="errors" ng-show="ComplaintForm.complaintantCommentsField.$invalid">
+					   <span ng-show="ComplaintForm.complaintantCommentsField.$error.required" class="mandatory">أدخل تعليقات</span>
+        </alert>
+				</label>
+				<input type="button" class="button button-block button-royal" ng-click="registerComplaintFromCustomers(complaint)" value="Submit"/ ng-disabled="ComplaintForm.$invalid">
+			</div>
+		</ng-form>
+		</ion-content>		
+	
+</ion-view>
